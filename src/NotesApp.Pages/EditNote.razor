@@ -1,0 +1,63 @@
+﻿@page "/edit-note/{noteId:guid}"
+
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using NotesApp.Domain;
+@using NotesApp.Service;
+
+@inject INotesService NotesService
+
+<div class="mx-3">
+    <h3>Edit @noteToEdit.Subject</h3>
+    <p>Hit "Save" to submit your changes.</p>
+</div>
+
+<EditForm class="mt-8" Model="@noteToEdit" OnValidSubmit="@SaveNote">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="addon-wrapping">Title</span>
+                <InputText class="form-control" placeholder="Your cool new note" @bind-Value="noteToEdit.Subject" />
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="addon-wrapping">Your Note</span>
+                <InputTextArea class="form-control" placeholder="Type your note here" @bind-Value="noteToEdit.Message" />
+            </div>
+            <div class="input-group">
+                <span class="input-group-text">@@</span>
+                <InputText class="form-control" placeholder="Author" @bind-Value="noteToEdit.Author" />
+            </div>
+            <div class="input-group input-group-sm mb-3 mt-3">
+                <button class="btn btn-primary form-control" type="submit">Save</button>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <button class="btn btn-secondary form-control" type="button">
+                    <NavLink class="text-reset" href="my-notes" Match="NavLinkMatch.All">
+                    Back to notes
+                    </NavLink>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</EditForm>
+
+@code {
+    [Parameter]
+    public Guid noteId { get; set; }
+
+    private Note noteToEdit = new();
+
+    protected override void OnInitialized()
+    {
+        noteToEdit = NotesService.Get(noteId) ?? new();
+    }
+
+    private void SaveNote()
+    {
+        NotesService.EditNote(noteToEdit);
+    }
+}

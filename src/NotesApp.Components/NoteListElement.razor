@@ -1,0 +1,23 @@
+﻿@using NotesApp.Domain;
+<div class="fluid-container text-center">
+    <div class="row">
+        @note.Subject
+        </div>
+        <div class="row">
+            <div class="col">
+                 Erstellt am @note.Created.ToShortDateString()
+        </div>
+        <div class="col">
+            von @note.Author
+        </div>
+        <div class="col">
+            last edited @note.LastModified.ToShortDateString()
+        </div>
+    </div>
+    <p>@note.Author</p>
+</div>
+
+@code {
+    [Parameter]
+    public Note? note { get; set; }
+}

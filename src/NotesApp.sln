@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApp.Components", "NotesApp.Components\NotesApp.Components.csproj", "{CF73174D-67C0-4401-8544-8131C3C2786E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotesApp.Components", "NotesApp.Components\NotesApp.Components.csproj", "{CF73174D-67C0-4401-8544-8131C3C2786E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApp.Maui", "NotesApp.Maui\NotesApp.Maui.csproj", "{EB4254EC-2C5B-4384-833D-9D77351C3729}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotesApp.Maui", "NotesApp.Maui\NotesApp.Maui.csproj", "{EB4254EC-2C5B-4384-833D-9D77351C3729}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApp.Blazor", "NotesApp.Blazor\NotesApp.Blazor.csproj", "{DE99003B-7992-4469-A371-89C82AC87EA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotesApp.Blazor", "NotesApp.Blazor\NotesApp.Blazor.csproj", "{DE99003B-7992-4469-A371-89C82AC87EA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApp.Domain", "NotesApp.Domain\NotesApp.Domain.csproj", "{CFA367FF-4C68-4460-AC2D-CA2B522BE977}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotesApp.Domain", "NotesApp.Domain\NotesApp.Domain.csproj", "{CFA367FF-4C68-4460-AC2D-CA2B522BE977}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApp.Service", "NotesApp.Service\NotesApp.Service.csproj", "{00877923-910D-4A19-B90E-BD17753F9FF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotesApp.Service", "NotesApp.Service\NotesApp.Service.csproj", "{00877923-910D-4A19-B90E-BD17753F9FF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApp.Pages", "NotesApp.Pages\NotesApp.Pages.csproj", "{DECB0184-FDC2-4ADB-8C05-A1CE209744BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{00877923-910D-4A19-B90E-BD17753F9FF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00877923-910D-4A19-B90E-BD17753F9FF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00877923-910D-4A19-B90E-BD17753F9FF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DECB0184-FDC2-4ADB-8C05-A1CE209744BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DECB0184-FDC2-4ADB-8C05-A1CE209744BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DECB0184-FDC2-4ADB-8C05-A1CE209744BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DECB0184-FDC2-4ADB-8C05-A1CE209744BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

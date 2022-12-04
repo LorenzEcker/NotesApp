@@ -52,6 +52,7 @@
     <ItemGroup>
       <ProjectReference Include="..\NotesApp.Components\NotesApp.Components.csproj" />
       <ProjectReference Include="..\NotesApp.Domain\NotesApp.Domain.csproj" />
+      <ProjectReference Include="..\NotesApp.Pages\NotesApp.Pages.csproj" />
       <ProjectReference Include="..\NotesApp.Service\NotesApp.Service.csproj" />
     </ItemGroup>
 
